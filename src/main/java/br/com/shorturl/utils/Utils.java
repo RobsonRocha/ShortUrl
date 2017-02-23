@@ -14,7 +14,7 @@ import br.com.shoturl.pojo.Top10;
 
 public class Utils {
 
-	private static String ALPHABET = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUWXYZ-_";
+	private static String ALPHABET = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUWXYZ";
 	private static int BASE = ALPHABET.length();
 
 	private static String encode(long num) {
@@ -177,7 +177,7 @@ public class Utils {
 	}
 
 	public static String randonWord() {
-		String leters = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUWXYZ-_";
+		String leters = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUWXYZ";
 		int random;
 		String word = "";
 		// para gerar uma quantidade letras
@@ -190,7 +190,7 @@ public class Utils {
 	}
 
 	public static String code() {
-		String leters = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUWXYZ-_";
+		String leters = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUWXYZ";
 		int random;
 		String code = "";
 
