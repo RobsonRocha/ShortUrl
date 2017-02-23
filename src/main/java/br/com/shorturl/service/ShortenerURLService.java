@@ -8,14 +8,14 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import br.com.shorturl.exception.CustomAliasAlreadyExistsException;
+import br.com.shorturl.exception.InternalErrorException;
+import br.com.shorturl.exception.InvalidURLException;
+import br.com.shorturl.exception.ShortURLNotFoundException;
+import br.com.shorturl.exception.UnableToCreateException;
+import br.com.shorturl.pojo.ShortURL;
+import br.com.shorturl.pojo.Top10;
 import br.com.shorturl.utils.Utils;
-import br.com.shoturl.exception.CustomAliasAlreadyExistsException;
-import br.com.shoturl.exception.InternalErrorException;
-import br.com.shoturl.exception.InvalidURLException;
-import br.com.shoturl.exception.ShortURLNotFoundException;
-import br.com.shoturl.exception.UnableToCreateException;
-import br.com.shoturl.pojo.ShortURL;
-import br.com.shoturl.pojo.Top10;
 
 public class ShortenerURLService {
 	

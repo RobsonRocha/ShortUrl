@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.shorturl.connection.DBConnection;
-import br.com.shoturl.pojo.ShortURL;
-import br.com.shoturl.pojo.Top10;
+import br.com.shorturl.pojo.ShortURL;
+import br.com.shorturl.pojo.Top10;
 
 public class Utils {
 

@@ -22,9 +22,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
 import br.com.shorturl.controller.MainController;
+import br.com.shorturl.pojo.ShortURL;
+import br.com.shorturl.pojo.Top10;
 import br.com.shorturl.utils.Utils;
-import br.com.shoturl.pojo.ShortURL;
-import br.com.shoturl.pojo.Top10;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
