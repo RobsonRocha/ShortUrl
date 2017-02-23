@@ -22,7 +22,7 @@ Também foi criado um cliente em [AngularJs](https://angularjs.org/) para mostrar
 Foram implementados três serviços REST que podem ser chamados via navegador da seguinte maneira:
 
 * PUT `http://endereco/encode?originalurl=[URL a ser encurtada]&alias=[Alias opcional para a URL]`
-Gera uma URL encurtada no formato `http://shortener.be/[Código]`, caso alias seja passado também o formato ficará `http://shortener.be/[alias]`.
+Gera uma URL encurtada no formato `http://shortener.be/[Código]`, caso alias seja passado, o formato ficará `http://shortener.be/[alias]`.
 
 * PUT `http://endereco/decode?shorturl=[http://shortener.be/[Código]]`
 Retorna a URL original.
