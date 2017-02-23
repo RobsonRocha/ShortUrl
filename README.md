@@ -7,8 +7,8 @@ Projeto criado para prover o serviço (REST) de encurtar uma URL, onde três servi
 	Recurperar a URL encurtada e
 	Um relatório com as 10 URLs mais acessadas.
 	
-Dessa forma, dada uma palavra URL para o encurtador, será retornada uma nova URL do tipo http://shortener.be/[Código], onde código é a identificação da URL original.
-Caso a URL http://shortener.be/[Código] seja passada para o serviço de recuperação, será retornada a URL original.
+Dessa forma, dada uma palavra URL para o encurtador, será retornada uma nova URL do tipo `http://shortener.be/[Código]`, onde código é a identificação da URL original.
+Caso a URL `http://shortener.be/[Código]` seja passada para o serviço de recuperação, será retornada a URL original.
  
 O algoritmo utilizado é considerado ingênuo (naive), pois ele atribui um código único alfanumérico à URL original, baseado no ID do banco de dados.
 
@@ -22,9 +22,9 @@ Também foi criado um cliente em [AngularJs](https://angularjs.org/) para mostrar
 Foram implementados três serviços REST que podem ser chamados via navegador da seguinte maneira:
 
 * PUT `http://endereco/encode?originalurl=[URL a ser encurtada]&alias=[Alias opcional para a URL]`
-Gera uma URL encurtada no formato http://shortener.be/[Código], caso alias seja passado também o formato ficará http://shortener.be/[alias].
+Gera uma URL encurtada no formato `http://shortener.be/[Código]`, caso alias seja passado também o formato ficará `http://shortener.be/[alias]`.
 
-* PUT `http://endereco/decode?shorturl=[http://shortener.be/[Código]`
+* PUT `http://endereco/decode?shorturl=[http://shortener.be/[Código]]`
 Retorna a URL original.
 
 * GET `http://endereco/top10`
@@ -47,7 +47,7 @@ Para facilitar a demostranção do funcionamento do registro, o banco de dados usa
 ##Testes
 
 Para os testes foram utilizadas as bibliotecas [JUnit](http://junit.org/junit4/).
-Para executar os testes basta escrever na linha de comando abaixo com o sistema no ar.
+Para executar os testes basta escrever na linha de comando abaixo.
 
  ```mvn test```
 
@@ -65,7 +65,7 @@ Para acessá-lo basta colocar no navegador o endereço inicial do serviço, como po
 
 `http://localhost:8080`
 
-Aparecerá a página inicial com seu menu conforme imagem abaixo.
+Aparecerá a página inicial conforme ilustra a imagem abaixo.
 
 ![Alt text](https://github.com/RobsonRocha/ShortUrl/blob/master/cliente.jpg "Encurtador de URL")
 
