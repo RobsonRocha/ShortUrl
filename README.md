@@ -4,7 +4,7 @@
 
 Projeto criado para prover o serviço (REST) de encurtar uma URL, onde três serviços são oferecidos:
 	Encurtar uma URL;
-	Recurperar a URL encurtada e
+	Recuperar a URL encurtada e
 	Um relatório com as 10 URLs mais acessadas.
 	
 Dessa forma, dada uma palavra URL para o encurtador, será retornada uma nova URL do tipo `http://shortener.be/[Código]`, onde código é a identificação da URL original.
@@ -41,7 +41,7 @@ Na pasta target serão gerados vários arquivos, mas o pacote principal é gerado c
 
 ## Banco de dados
 
-Para facilitar a demostranção do funcionamento do registro, o banco de dados usado foi o [H2](http://www.h2database.com/html/main.html).
+Para facilitar a demostração do funcionamento do registro, o banco de dados usado foi o [H2](http://www.h2database.com/html/main.html).
 
 
 ##Testes
