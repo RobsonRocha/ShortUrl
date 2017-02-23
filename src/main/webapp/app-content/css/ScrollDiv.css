@@ -1,0 +1,8 @@
+@CHARSET "ISO-8859-1";
+
+.ScrollStyle {
+	float: left;
+	width: 455px;
+	overflow-y: auto;
+	height: 100px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="pt-br">
+<head>
+<meta charset="utf-8">
+</head>
+<div ng-include="'navbar/navbar.view.html'"></div>
+<section id="main-content">
+	<section class="wrapper">
+		<div class="col-md-6 col-md-offset-3">
+			<h2>Recuperar URL</h2>
+			<form name="form" ng-submit="vm.callDecoderUrl()" role="form">
+				<div class="form-group"
+					ng-class="{ 'has-error': form.encodedURL.$dirty && form.originalURL.$error.required }">
+					<label for="labelURL">URL encurtada</label> <input type="text"
+						name="encodedURL" id="encodedURL" class="form-control"
+						ng-model="vm.insertUrl.shortUrl.originalUrl" required /> <span
+						ng-show="form.encodedURL.$dirty && form.encodedURL.$error.required"
+						class="help-block">Preencha o campo URL encurtada.</span>
+				</div>		
+				<div class="form-actions">
+					<button type="submit" ng-disabled="form.$invalid || vm.dataLoading"
+						class="btn btn-primary">Buscar URL original</button>
+					<img ng-if="vm.dataLoading"
+						src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+				</div>
+				<br />
+				<span ng-if=vm.show class="help-block">URL original:&nbsp;&nbsp;<b><a href=" " ng-click=vm.redirectToURL()>{{vm.shortUrl.url}}</a></b></span><br/>
+				<span ng-if=vm.show class="help-block">Tempo de resposta:&nbsp;&nbsp;<b>{{vm.shortUrl.statistics.timeTaken}}ms</b></span>
+				<span ng-if=vm.showError class="help-block">Alias:&nbsp;&nbsp;<b>{{vm.shortUrl.alias}}</b></span><br/>
+				<span ng-if=vm.showError class="help-block">Código do erro:&nbsp;&nbsp;<b>{{vm.shortUrl.errorCode}}</b></span><br/>
+				<span ng-if=vm.showError class="help-block">Mensagem:&nbsp;&nbsp;<b>{{vm.shortUrl.description}}</b></span><br/>
+				<span ng-if=vm.showError class="help-block">Tempo de resposta:&nbsp;&nbsp;<b>{{vm.shortUrl.statistics.timeTaken}}ms</b></span>
+			</form>
+		</div>
+	</section>
+</section>
+</html>

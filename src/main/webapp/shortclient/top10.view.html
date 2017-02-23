@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="pt-br">
+<head>
+<meta charset="utf-8">
+
+</head>
+<div ng-include="'navbar/navbar.view.html'"></div>
+<section id="main-content">
+	<section class="wrapper">
+		<div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+		<h3>As 10 URLs mais acessadas:</h3>
+
+		<form class="form-inline">
+			<div class="form-group">
+				<label>Procurar</label> <input type="text" ng-model="procurar"
+					class="form-control" placeholder="Procurar...">
+			</div>
+		</form>
+		<div class="col-md-12">
+			<table class="table table-striped table-condensed">
+				<thead>
+					<tr>
+						<th>Quantidade</th>
+						<th>URL encurtada</th>
+						<th>URL original</th>						
+					</tr>
+				</thead>
+				<tbody>
+					<tr
+						dir-paginate="t10 in vm.top10|filter:procurar|itemsPerPage:10">
+						<td>{{t10.quantity}}</td>
+						<td>http://shortener.be/{{t10.shortUrl.alias}}</td>
+						<td>{{t10.shortUrl.url}}</td>						
+					</tr>
+				</tbody>
+			</table>
+			<dir-pagination-controls max-size="5" boundary-links="true"></dir-pagination-controls>
+
+		</div>
+	</section>
+</section>
+</html>
