@@ -37,7 +37,7 @@ Para compilar gerando o pacote basta executar o comando abaixo na linha de coman
 
 ```mvn -DskipTests compile package```
 
-Na pasta target serão gerados vários arquivos, mas o pacote principal é gerado com o nome `ShortURL-1.0.0-SNAPSHOT.jar`
+Na pasta target serão gerados vários arquivos, mas o pacote principal é gerado com o nome `ShortURL-1.0.0-SNAPSHOT.war`
 
 ## Banco de dados
 
@@ -56,7 +56,7 @@ Para executar os testes basta escrever na linha de comando abaixo.
 
 Para executar o serviço, estando na pasta onde se encontra o arquivo ShortURL-1.0.0-SNAPSHOT.jar, basta rodar na linha de comando o seguinte:
 
-```java -jar ShortURL-1.0.0-SNAPSHOT.jar```
+```java -jar ShortURL-1.0.0-SNAPSHOT.war```
 
 ## Cliente
 
