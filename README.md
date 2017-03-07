@@ -54,7 +54,7 @@ Para executar os testes basta escrever na linha de comando abaixo.
 
 ## Execução
 
-Para executar o serviço, estando na pasta onde se encontra o arquivo ShortURL-1.0.0-SNAPSHOT.jar, basta rodar na linha de comando o seguinte:
+Para executar o serviço, estando na pasta onde se encontra o arquivo ShortURL-1.0.0-SNAPSHOT.war, basta rodar na linha de comando o seguinte:
 
 ```java -jar ShortURL-1.0.0-SNAPSHOT.war```
 
